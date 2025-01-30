@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FullPage.js Scripts and Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
+    <!-- aos (Animation And Scroll) scripts and link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+   
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- -->
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { font-family: Arial, sans-serif; text-align: center; }
+    
+    .progress-bar { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: #ff5733; z-index: 1000; }
+       
+      
+    .section { text-align: center; font-size: 2rem;  align-items: center; justify-content: center; height: 100vh; }
+    #section1 { background: #ff5733; color: white; }
+    #section2 { background: #33aaff; color: white; display:flex; flex-direction: column;} 
+    #section3 { background: #28a745; color: white; }
+    #section4 { background: #795548; color: white; justify-content: center }
+
+    .main-div{padding:10px;}
+
+    .box { width: 200px; height: 100px; margin: 50px auto; background: coral; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; font-weight: bold; }
+  
+    .aos-box{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .swiper-container { width: 80%; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .logo { font-size: 3rem; font-weight: bold; color: #ff5733; }
+        .swiper-slide{background-color: gold; text-align: center; height:100px; }
+  </style>
+</head>
+<body>
+
+    <div class="progress-bar" id="progressBar"></div>
+        
+        <div id="fullPageDemo">
+            
+            <div class="section" id="section1">
+                 <h1  >Numetry Technology</h1>
+            <h1 data-aos="fade-up">Innovating the Future</h1></div>
+            
+            <div class="section" id="section2">
+              
+                <h2>AOS Animations</h2>
+
+                <div  data-aos="fade-up">Fade Up</div>
+                <div   data-aos="zoom-in">Zoom In</div>
+                <div  data-aos="slide-left">Flip Left</div>
+                <div class="box" data-aos="slide-right">Slide Right</div>
+                
+             </div>
+
+            <div class="section" id="section3">
+                <h1>What Our Clients Say</h1>
+               <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">"Numetry transformed our business!" - Client A</div>
+                    <div class="swiper-slide">"Fantastic service and support!" - Client B</div>
+                    <div class="swiper-slide">"Highly recommend for tech solutions!" - Client C</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="section" id="section4">
+                <div style="padding: 300px;">
+
+                    <h1>Contact Us</h1>
+                    <p>Email: contact@numetrytech.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Fullpage -->
+    <script>
+        new fullpage('#fullPageDemo',{
+            // autoScrolling:true,
+            navigation:true,
+            showActiveTooltip:true,
+            navigationTooltips:['Home','About','Service','Contact'],
+            menu:true,
+
+            // scrollOverflow: true,
+            // scrollHorizontally:false,
+            touchSensitivity:500,
+            anchors: ['home', 'about', 'services'],
+            scrollOverflow:true,
+            bigSectionsDestination:top,
+            // scrollBar:auto-scroll,
+            fixedElements:'Hello World',
+
+            // afterLoad:function(origin,destination,direction){
+            //     alert("welcome to "+direction.index+" section!")
+            // } 
+
+        })
+
+// Delay AOS initialization until FullPage is fully loaded
+
+AOS.init({
+    duration: 1200, // Animation duration (default: 400ms)
+    easing: "ease-in-out", // Easing function
+    once: true // Run animation only once
+});
+
+
+
+// swapper.js
+new Swiper('.swiper-container', { pagination: { el: '.swiper-pagination', clickable: true }, loop: true });
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progressBar').style.width = (scrollTop / height) * 100 + '%';
+        });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+</body>
+</html>
