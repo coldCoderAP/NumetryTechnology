@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 400px;
+            height: 300px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-inner" id="carouselInner">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-controls">
+            <button onclick="prevSlide()">&#8593;</button>
+            <button onclick="nextSlide()">&#8595;</button>
+        </div>
+    </div>
+
+    <script>
+        const carouselInner = document.getElementById('carouselInner');
+        const slides = document.querySelectorAll('.carousel-inner img');
+        const slideHeight = 300;
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const offset = -index * slideHeight;
+            carouselInner.style.transform = `translateY(${offset}px)`;
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+    </script>
+</body>
+</html>

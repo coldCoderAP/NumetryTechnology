@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Numetry Technology</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        #about-us {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            margin: 30px;
+            border-radius: 15px;
+        }
+
+        #about-us h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #4e54c8;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel .slide {
+            display: none;
+        }
+
+        .carousel .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .carousel .slide.active {
+            display: block;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .carousel-controls {
+            margin-top: 15px;
+        }
+
+        .carousel-controls button {
+            background-color: #4e54c8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-controls button:hover {
+            background-color: #8f94fb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4e54c8;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Numetry Technology</h1>
+    </header>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <div class="carousel">
+            <div class="slide active">
+                <img src="images/numetryLogo.jpg" alt="Our Team">
+            </div>
+            <div class="slide">
+                <img src="images/numetryLogo.jpg" alt="Our Mission">
+            </div>
+            <div class="slide">
+                <img src="images/numetryLogo.jpg" alt="Innovation">
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button onclick="prevSlide()">&#8592; Previous</button>
+            <button onclick="nextSlide()">Next &#8594;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Numetry Technology. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll(".carousel .slide");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Auto-slide functionality
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>

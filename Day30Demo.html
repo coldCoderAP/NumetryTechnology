@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullPage with AOS Animations</title>
+    
+    <!-- Link to AOS Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Link to FullPage.js Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        section:nth-child(odd) {
+            background-color: #1e3a8a; /* Blue for odd sections */
+        }
+        
+        section:nth-child(even) {
+            background-color: #10b981; /* Green for even sections */
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            padding-top: 10px;
+        }
+
+        /* Styling for the FullPage navigation bullets */
+        .fp-controlArrow {
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #fullpage{
+            background-color: #10b981;
+        }
+        .sec1{
+            background-color: #1e3a8a;
+        }
+        .sec2{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="fullpage">
+        <section class="sec1" data-aos="fade-up">
+            <h1>Section 1</h1>
+            <p>This section fades in when scrolled into view.</p>
+        </section>
+
+        <section class="sec2" data-aos="fade-down">
+            <h1>Section 2</h1>
+            <p>This section fades down when scrolled into view.</p>
+        </section>
+
+        <section class="sec3" data-aos="zoom-in">
+            <h1>Section 3</h1>
+            <p>This section zooms in when scrolled into view.</p>
+        </section>
+
+        <section class="sec3" data-aos="flip-left">
+            <h1>Section 4</h1>
+            <p>This section flips left when scrolled into view.</p>
+        </section>
+
+    </div>
+
+    <!-- FullPage.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize FullPage.js and AOS -->
+    <script>
+        // FullPage.js initialization
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            scrollHorizontally: true,
+            navigation: true, // Enable navigation
+            navigationPosition: 'right', // Position of the navigation bullets
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 1200, // Duration of animations
+            easing: 'ease-in-out', // Smooth easing for transitions
+            once: true, // Animation triggers only once when in view
+        });
+    </script>
+
+</body>
+</html>

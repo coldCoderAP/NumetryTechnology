@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numetry Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .progress-bar { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: #ff5733; z-index: 1000; }
+        .section { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; }
+        .card { width: 250px; height: 350px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); padding: 20px; transition: transform 0.3s; }
+        .card:hover { transform: scale(1.1); }
+        .swiper-container { width: 80%; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .logo { font-size: 3rem; font-weight: bold; color: #ff5733; }
+        .swiper-slide{background-color: gold; text-align: center; height:100px; }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div id="fullpage">
+        <div class="section" id="section1">
+            <div class="logo">Numetry Technology</div>
+            <h1 data-aos="fade-up">Innovating the Future</h1>
+        </div>
+        <div class="section" id="section2">
+            <h1>Our Services</h1>
+            <div class="card" data-aos="flip-left">Web Development</div>
+            <div class="card" data-aos="flip-right">App Development</div>
+            <div class="card" data-aos="zoom-in">AI Solutions</div>
+        </div>
+        <div class="section" id="section3">
+            <h1>What Our Clients Say</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">"Numetry transformed our business!" - Client A</div>
+                    <div class="swiper-slide">"Fantastic service and support!" - Client B</div>
+                    <div class="swiper-slide">"Highly recommend for tech solutions!" - Client C</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <h1>Contact Us</h1>
+            <p>Email: contact@numetrytech.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        new fullpage('#fullpage', { autoScrolling: true, navigation: true });
+        AOS.init();
+        new Swiper('.swiper-container', { pagination: { el: '.swiper-pagination', clickable: true }, loop: true });
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progressBar').style.width = (scrollTop / height) * 100 + '%';
+        });
+    </script>
+</body>
+</html>

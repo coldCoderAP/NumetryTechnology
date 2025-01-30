@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FullPage.js Scripts and Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
+    <!-- aos (Animation And Scroll) scripts and link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .section { text-align: center; font-size: 2rem; display: flex; align-items: center; justify-content: center; height: 100vh; }
+    #section1 { background: #ff5733; color: white; }
+    #section2 { background: #33aaff; color: white; }
+    #section3 { background: #28a745; color: white; }
+    #section4 { background: #795548; color: white; }
+
+    .main-div{padding:10px;}
+
+
+    .box{background-color: #ffcc00; color:#ffffff;height: 200px; width: 200px; margin:20px}
+</style>
+</head>
+<body>
+
+    <div class="main-div">
+        
+        <div id="fullPageDemo">
+            
+            <div class="section" id="section1"></div>
+            
+            <div class="section" id="section2">
+
+                <div class="box" data-aos="fade-up">Fade Up</div>
+                <div class="box" data-aos="zoom-in" data-aos-delay="300">Zoom In (Delayed)</div>
+                <div class="box" data-aos="flip-left" data-aos-duration="1000">Flip Left (1s Duration)</div>
+                <div class="box" data-aos="slide-right" data-aos-easing="ease-in-out">Slide Right</div>
+            
+            </div>
+            <div class="section" id="section3"></div>
+            <div class="section" id="section4"></div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Fullpage -->
+    <script>
+        new fullpage('#fullPageDemo',{
+            autoScrolling:true,
+            navigation:true,
+            showActiveTooltip:true,
+            navigationTooltips:['Home','About','Service','Contact'],
+            menu:true,
+
+            scrollOverflow: true,
+            // scrollHorizontally:false,
+            touchSensitivity:500,
+            anchors: ['home', 'about', 'services'],
+            scrollOverflow:true,
+            bigSectionsDestination:top,
+            // scrollBar:auto-scroll,
+            fixedElements:'Hello World',
+
+            // afterLoad:function(origin,destination,direction){
+            //     alert("welcome to "+direction.index+" section!")
+            // } 
+
+        })
+
+// Delay AOS initialization until FullPage is fully loaded
+    window.addEventListener('load', function() {
+        AOS.init({
+            offset: 120, // Adjust this if needed
+            duration: 1000, // Set your desired animation duration
+            easing: 'ease-in-out',
+        });
+    });
+    </script>
+</body>
+</html>
