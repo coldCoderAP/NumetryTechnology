@@ -1,0 +1,103 @@
+body{
+  background: linear-gradient(135deg, #00c6ff, #000000);  /* Gradient background */
+
+  margin: 100px;;
+}
+
+.contact-form-container {
+    width: 100%;
+    /* margin-top:200px auto; */
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #0056b3;
+    font-size: 24px;
+  }
+  
+  .form-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .btn-submit {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background: linear-gradient(135deg, #0056b3, #003580);
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .contact-form-container {
+      padding: 20px;
+    }
+  
+    input, textarea {
+      font-size: 14px;
+    }
+  
+    .btn-submit {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

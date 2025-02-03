@@ -1,0 +1,353 @@
+/* * {
+    margin-left:-10px;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* 
+html, body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+} */
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.navbar {
+    /* margin-top:200px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0056b3, #007BFF);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 4rem;
+    width: 4rem;
+    /* margin-left: 10px; */
+    border-radius: 50%;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+}
+
+
+/* Create a parallax section */   /**/
+.parallax {
+    background-color:#007bff;
+    height: 10vh;      /*   Full height*/
+    background-attachment: fixed; /* Fix the background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.hero {
+    /* background: url('../images/numetryLogo.jpg') no-repeat center center/cover ; */
+    background-size: 80vh;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.hero h2, .hero p, .hero a {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    padding-top:20vh;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.btn-primary {
+    background: #007BFF;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.services {
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 1.5rem;
+    color: #0056b3;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Flip card Service*/
+
+/* Grid container */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    /* text-align: center;
+    justify-content:center; */
+    place-items: center; 
+  }
+  
+  /* Flip card container */
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 270px;
+    perspective: 1000px; /* Adds depth */
+  }
+  
+  /* Inner container */
+  .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Flip on hover */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front & back styling */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide back face */
+    border-radius: 10px;
+  }
+  
+  /* Front side */
+  .flip-card-front {
+    background: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  /* Back side */
+  .flip-card-back {
+    background: #ff5733;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+/* Carasoul */
+.about {
+    background: #f9f9f9;
+    padding: 1rem 0;
+    text-align: center;
+    /* margin-top: 12%; */
+}
+ 
+
+ 
+.carousel {
+    position: relative;
+    max-width: 400px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+
+    width:400px;
+    height: 400px;
+    /* height:50%; */
+    flex-shrink: 0;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*  */
+/* .portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} */
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column {
+    flex: 1 1 250px;
+    margin: 1em;
+}
+.footer-column a{ 
+    color: #f9f9f9;
+}
+.footer-column ul {  
+
+    list-style-type: none;
+} 
+.footer-column h3 {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 0.2em;
+}
+
+.footer-bottom{
+
+    padding: 10px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #ecf0f1;
+    margin-right: 1em;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
