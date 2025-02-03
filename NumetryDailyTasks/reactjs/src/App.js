@@ -17,8 +17,8 @@ function App() {
        {/* <ContactForm/>   */}
         {/* <HomePage/> */}
        {/* <LoginSignup/> */}
-       {/* <NumetryWeb/> */}
-       {<Gallery/>}
+       <NumetryWeb/>
+       {/* {<Gallery/>} */}
     </div>
   );
 }
