@@ -1,0 +1,94 @@
+/* Testimonial Slider Container */
+
+ 
+.testimonial-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #8caee1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Swiper Slider */
+  .testimonial-slider {
+    padding: 20px;
+  }
+  
+  /* Individual Slide */
+  .testimonial-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Client Image */
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #f39c12;
+  }
+  
+  /* Client Name */
+  .testimonial-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Review Text */
+  .testimonial-review {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+  
+  /* Star Rating */
+  .star-rating {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Filled Star */
+  .filled-star {
+    color: #f39c12;
+  }
+  
+  /* Empty Star */
+  .empty-star {
+    color: #ddd;
+  }
+  
+  /* Navigation Buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #f39c12 !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #f39c12 !important;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .testimonial-container {
+      padding: 15px;
+    }
+    
+    .testimonial-review {
+      font-size: 0.9rem;
+    }
+    
+    .star-rating {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Css/Jan31ImageGallery.css';
+import '../Css/Feb3ImageGallery.css';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

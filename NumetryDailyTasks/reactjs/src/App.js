@@ -8,7 +8,8 @@ import LoginSignup from './Components/LoginSignup/LoginSignup.jsx'
 
 import NumetryWeb from './Components/LoginSignup/NumetryWeb.jsx'
  
-import Gallery from './Components/LoginSignup/Jan31ImageGallery.jsx'
+import Gallery from './Components/LoginSignup/Feb3ImageGallery.jsx'
+import TestimonialSlider from './Components/LoginSignup/Feb4DynamicTestimonial.jsx'
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
        {/* <ContactForm/>   */}
         {/* <HomePage/> */}
        {/* <LoginSignup/> */}
-       <NumetryWeb/>
+       {/* <NumetryWeb/> */}
        {/* {<Gallery/>} */}
+       <TestimonialSlider/>
     </div>
   );
 }
