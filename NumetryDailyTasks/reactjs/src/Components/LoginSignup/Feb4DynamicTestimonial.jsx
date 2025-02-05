@@ -10,14 +10,14 @@ const fetchTestimonials = async () => {
   return [
     {
       name: "Atharva Pande",
-      review: "This product changed my life! Highly recommend it to everyone.",
+      review: "Great job this term! You have demonstrated excellent understanding of the subject and consistently submit high-quality work. ",
       image: require("../images/passport.jpeg"),
       rating: 5,
     },
     {
-      name: "Jane Smith",
+      name: "Akash Mike",
       review: "Amazing service and quality. I will be back for more!",
-      image: require("../images/passport.jpeg"),
+      image: require("../images/Nature1.jpeg"),
       rating: 4,
     },
     {
