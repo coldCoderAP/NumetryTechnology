@@ -33,9 +33,11 @@ export default function ProductShowcase() {
   return (
     <div className="p-6 grid gap-8">
       {/* Product Card */}
+{/* 
+      <div class="cards" style={{ display: "flex", flexDirection: "column" }}
+      >
 
-      <div class="cards"  style={{ dispaly: "flex", fontSize: "24px" }}>
-
+     
       <Card className="relative overflow-hidden w-64 h-80 shadow-lg">
         <motion.img
           src={require("../images/book.jpeg")}
@@ -90,7 +92,44 @@ export default function ProductShowcase() {
           </motion.button>
         </CardContent>
       </Card>
-       </div>
+       </div> */}
+
+<div className="cards" style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "16px" }}>
+ 
+  
+  
+  <Card className="relative overflow-hidden w-64 h-80 shadow-lg">
+    <motion.img src={require("../images/book.jpeg")} alt="Product" className="w-full h-full object-cover" whileHover={{ scale: 1.1 }} />
+    <CardContent className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-4">
+      <h3 className="text-lg font-bold">Amazing Product</h3>
+      <p>$29.99</p>
+      <motion.button className="mt-2 bg-blue-500 px-4 py-2 rounded text-white" whileHover={{ backgroundColor: "#2563eb", scale: 1.1 }}>Buy Now</motion.button>
+    </CardContent>
+  </Card>
+  
+
+  <Card className="relative overflow-hidden w-64 h-80 shadow-lg">
+    <motion.img src={require("../images/book3.jpeg")} alt="Product" className="w-full h-full object-cover" whileHover={{ scale: 1.1 }} />
+    <CardContent className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-4">
+      <h3 className="text-lg font-bold">Amazing Product</h3>
+      <p>$29.99</p>
+      <motion.button className="mt-2 bg-blue-500 px-4 py-2 rounded text-white" whileHover={{ backgroundColor: "#2563eb", scale: 1.1 }}>Buy Now</motion.button>
+    </CardContent>
+  </Card>
+ 
+ 
+
+  <Card className="relative overflow-hidden w-64 h-80 shadow-lg">
+    <motion.img src={require("../images/book2.jpeg")} alt="Product" className="w-full h-full object-cover" whileHover={{ scale: 1.1 }} />
+    <CardContent className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-4">
+      <h3 className="text-lg font-bold">Amazing Product</h3>
+      <p>$29.99</p>
+      <motion.button className="mt-2 bg-blue-500 px-4 py-2 rounded text-white" whileHover={{ backgroundColor: "#2563eb", scale: 1.1 }}>Buy Now</motion.button>
+    </CardContent>
+  </Card>
+ 
+</div>
+
 
       {/* Countdown Timer */}
       <div className="text-center p-4 border rounded-lg shadow-md">
@@ -98,8 +137,11 @@ export default function ProductShowcase() {
         <p className="text-2xl font-bold">{formatTime(timeLeft)}</p>
       </div>
 
+
       {/* Image Gallery with Filters */}
+    
       <div>
+        <h1>Image Gallery</h1>
         <div className="flex gap-4 mb-4">
           {["All", "Nature", "Technology", "Art"].map((category) => (
             <Button key={category} onClick={() => setFilter(category)}>

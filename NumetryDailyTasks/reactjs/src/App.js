@@ -12,6 +12,7 @@ import NumetryWeb from './Components/LoginSignup/NumetryWeb.jsx'
 import Gallery from './Components/LoginSignup/Feb3ImageGallery.jsx'
 import TestimonialSlider from './Components/LoginSignup/Feb4DynamicTestimonial.jsx'
 import ProductShowcase from './Components/LoginSignup/Feb5ImageGallery.jsx'
+import NoteTakingApp from './Components/LoginSignup/Feb7PaginationLocalStorage.jsx'
 
 
 
@@ -26,7 +27,8 @@ function App() {
        {/* <NumetryWeb/> */}
        {/* {<Gallery/>} */}
        {/* <TestimonialSlider/> */}
-       <ProductShowcase/>
+       {/* <ProductShowcase/> */}
+       <NoteTakingApp/>
     </div>
   );
 }
