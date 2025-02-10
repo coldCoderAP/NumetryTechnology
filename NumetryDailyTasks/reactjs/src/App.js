@@ -19,16 +19,16 @@ import NoteTakingApp from './Components/LoginSignup/Feb7PaginationLocalStorage.j
 function App() {
   return (
     <div >   
-      {/* <CountdownTimer/>
-      <ProductCard/> */}
+      {/* <CountdownTimer/> */}
+      {/* <ProductCard/> */}
        {/* <ContactForm/>   */}
         {/* <HomePage/> */}
        {/* <LoginSignup/> */}
-       {/* <NumetryWeb/> */}
+       <NumetryWeb/>
        {/* {<Gallery/>} */}
        {/* <TestimonialSlider/> */}
        {/* <ProductShowcase/> */}
-       <NoteTakingApp/>
+       {/* <NoteTakingApp/> */}
     </div>
   );
 }
