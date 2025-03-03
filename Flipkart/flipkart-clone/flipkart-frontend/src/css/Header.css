@@ -1,0 +1,56 @@
+/* Header Container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #2874f0;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Flipkart Logo */
+  .logo img {
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 40%;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    flex: 1;
+  }
+  
+  .search-icon {
+    color: #2874f0;
+    cursor: pointer;
+  }
+  
+  /* Login, More, Cart */
+  .login, .more, .cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  .dropdown-icon {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
